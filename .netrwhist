@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/jonlaing/projects/fix_dup_user'
 let g:netrw_dirhist_2='/Users/jonlaing/projects/production'
 let g:netrw_dirhist_3='/Users/jonlaing/Desktop/SyncLogging/373233543.058082/DeckSync_373233543.058440'
 let g:netrw_dirhist_4='/Users/jonlaing/projects/acts_as_list'
+let g:netrw_dirhist_5='/Users/jonlaing/.vim/bundle'
+let g:netrw_dirhist_6='/Users/jonlaing/.gocode/src/github.com/jonlaing/sql_utils'
