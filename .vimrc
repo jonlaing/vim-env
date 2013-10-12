@@ -5,8 +5,11 @@ set t_Co=256
 
 set pastetoggle=<F5>
 
+
 set nocompatible          " We're running Vim, not Vi!
 syntax on                 " Enable syntax highlighting
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 
 " Load matchit (% to bounce from do to end, etc.)
@@ -44,3 +47,35 @@ iab envr #!/usr/bin/env ruby
 
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
+
+autocmd Filetype go set makeprg=go\ build
+au BufWritePost *.go silent! !ctags -R &
+au BufWritePost *.go silent! Fmt
+
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
