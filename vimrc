@@ -5,27 +5,29 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle' 
+Plugin 'gmarik/vundle' 
 
-Bundle 'mileszs/ack.vim'
-Bundle 'uggedal/go-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-endwise'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'jcf/vim-latex'
-Bundle 'groenewege/vim-less'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'phleet/vim-mercenary'
-Bundle 'slim-template/vim-slim'
-Bundle 'skalnik/vim-vroom'
+Plugin 'mileszs/ack.vim'
+Plugin 'uggedal/go-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'jcf/vim-latex'
+Plugin 'groenewege/vim-less'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'phleet/vim-mercenary'
+Plugin 'slim-template/vim-slim'
+Plugin 'skalnik/vim-vroom'
+Plugin 'mattn/emmet-vim'
+Plugin 'edthedev/minion'
 
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 
@@ -62,8 +64,8 @@ if &term == "screen" || &term == "xterm"
 	set title
 endif
 
-autocmd VimEnter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd VimEnter * NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
